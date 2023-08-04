@@ -1,6 +1,6 @@
 #!/bin/bash
 
-c=$(cat file.txt | awk -F' ' END'{print NF}');
+c=$(cat file.txt | awk 'END {print NF}');
 
 for i in $(seq 1 $c);
 do
