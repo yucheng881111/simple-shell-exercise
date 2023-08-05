@@ -7,14 +7,8 @@ do
 	line=$LINE
 	for k in $line
 	do
-		if [ "$k" = "" ];
-        	then
-                	m["$k"]=1
-        	else
-                	m["$k"]=$((${m["$k"]}+1))
-        	fi	
+            m["$k"]=$((${m["$k"]}+1))      		
 	done
-
 done  < words.txt
 
 for key in ${!m[*]};
